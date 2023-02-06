@@ -1,0 +1,80 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+  <link
+  rel="stylesheet"
+  href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+  integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+  crossorigin="anonymous"
+/>
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link
+  href="https://fonts.googleapis.com/css2?family=Bitter:ital@0;1&family=Hind:wght@300;400&family=Oswald:wght@300;400;500&display=swap"
+  rel="stylesheet"
+/>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>
+        Potluck Guest List
+      </h1>
+
+      <h3>
+        <i class="fa fa-envelope" aria-hidden="true"></i> Invite 8 people! :)
+      </h3>
+    </header>
+    <div class="add-guest">
+      <div class="alert hide">
+        <h3>Guest list is full!</h3>
+        <button class="assign"><a href="#assigned">Assign dishes!</a></button>
+      </div>
+      <label for="invite">Add Guest</label>
+      <input type="text" id="invite" />
+      <button class="invite">Invite</button>
+    </div>
+    <div class="guest-list-container">
+      <ul class="guest-list"></ul>
+      <p class="attendees">Attending: <span class="attendance">0</span></p>
+    </div>
+    <div id="assigned" class="items-list-container">
+      <ul class="assigned-items"></ul>
+    </div>
+    <footer class="hide">
+      <h3>See you on Saturday!</h3>
+    </footer>
+  </div>
+
+
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>
