@@ -1,3 +1,5 @@
+const assignBtn = document.querySelector(".assign");
+const assignItems = document.querySelector("#assigned .assigned-items");
 const addGuestBtn = document.querySelector(".add-guest .invite");
 const guestName = document.querySelector(".add-guest #invite");
 const guestList = document.querySelector(".guest-list-container .guest-list");
@@ -43,6 +45,24 @@ const updateGuestNum = function(){
         //guestCount.innerText = "GUEST LIST IS FULL!";  
         } 
     } 
+};
+assignBtn.addEventListener('click',function(){
+    assignDish();
+    assignBtn.disabled = true;
+});
+const assignDish = function(){
+    let potLuckItems = ["fruit","cookies","hummus","potato","salad","watermelon","mango","rasins"]
+    const allGuest = document.querySelectorAll(".guest-list-container .guest-list li");
+    for (let guest of allGuest){
+        let randomPotLuckIndex = Math.floor(Math.random()*potLuckItems.length);
+        let randomPotLuckItem = potLuckItems[randomPotLuckIndex];
+        console.log(randomPotLuckIndex);
+        let listItem = document.createElement("li");
+        listItem.innerText = ` ${guest.innerText} is bringing ${randomPotLuckItem}. `
+        assignItems.append(listItem);
+        potLuckItems.splice(randomPotLuckIndex,1);
+        
+    };
 };
 const clearInput = function(){
     guestName.value = "";
